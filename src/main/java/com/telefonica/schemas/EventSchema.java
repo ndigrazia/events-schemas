@@ -1,6 +1,6 @@
-package com.telefonica.dto;
+package com.telefonica.schemas;
 
-public class EventDto {
+public class EventSchema {
     
     String event_id;
     String creation_issue;
@@ -10,7 +10,7 @@ public class EventDto {
     String data;
     String publisher;
 
-    public EventDto(String event_id, String creation_issue, 
+    public EventSchema(String event_id, String creation_issue, 
             Type type, SubType subtype, String version, 
                 String data, String publisher) {
         this.event_id = event_id;
@@ -22,7 +22,7 @@ public class EventDto {
         this.publisher = publisher;
     }
     
-    public EventDto() {
+    public EventSchema() {
     }
 
     public String getEvent_id() {
