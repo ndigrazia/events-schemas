@@ -5,7 +5,7 @@
 
   <groupId>com.telefonica</groupId>
   <artifactId>events-schemas</artifactId>
-  <version>1.0</version>
+  <version>2.0</version>
 
   <name>events-schemas</name>
   <!-- FIXME change it to the project's website -->
@@ -31,7 +31,7 @@
   </dependencyManagement>
 
   <dependencies>
-    <dependency>
+      <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-api</artifactId>
       <scope>test</scope>
@@ -41,6 +41,25 @@
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-params</artifactId>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+          <groupId>com.fasterxml.jackson.core</groupId>
+          <artifactId>jackson-core</artifactId>
+          <version>2.15.2</version> <!-- Usa la versión más reciente -->
+    </dependency>
+
+    <!-- Jackson Databind: Incluye ObjectMapper y soporte para serialización/deserialización -->
+    <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
+        <version>2.15.2</version>
+    </dependency>
+
+    <!-- Jackson Annotations: Proporciona las anotaciones como @JsonAlias, @JsonProperty, etc. -->
+    <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-annotations</artifactId>
+        <version>2.15.2</version>
     </dependency>
   </dependencies>
 

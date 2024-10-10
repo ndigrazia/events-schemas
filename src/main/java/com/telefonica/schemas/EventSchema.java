@@ -1,44 +1,38 @@
 package com.telefonica.schemas;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
+import com.fasterxml.jackson.databind.JsonNode;
+
 public class EventSchema {
-    
-    String event_id;
-    String creation_issue;
+
+    @JsonAlias(value = "event_id")
+    String eventId;
+    @JsonAlias(value = "creation_issue")
+    String creationIssue;
     Type type;
     SubType subtype;
     String version;
-    String data;
+    JsonNode data;
     String publisher;
 
-    public EventSchema(String event_id, String creation_issue, 
-            Type type, SubType subtype, String version, 
-                String data, String publisher) {
-        this.event_id = event_id;
-        this.creation_issue = creation_issue;
-        this.type = type;
-        this.subtype = subtype;
-        this.version = version;
-        this.data = data;
-        this.publisher = publisher;
-    }
-    
     public EventSchema() {
     }
 
-    public String getEvent_id() {
-        return event_id;
+    public String getEventId() {
+        return eventId;
     }
-    public void setEvent_id(String event_id) {
-        this.event_id = event_id;
-    }
-
-    public String getCreation_issue() {
-        return creation_issue;
-    }
-    public void setCreation_issue(String creation_issue) {
-        this.creation_issue = creation_issue;
+    public void setEventId(String eventId) {
+        this.eventId = eventId;
     }
 
+    public String getCreationIssue() {
+        return creationIssue;
+    }
+
+    public void setCreationIssue(String creationIssue) {
+        this.creationIssue = creationIssue;
+    }   
+   
     public Type getType() {
         return type;
     }
@@ -60,10 +54,10 @@ public class EventSchema {
         this.version = version;
     }
 
-    public String getData() {
+    public JsonNode getData() {
         return data;
     }
-    public void setData(String data) {
+    public void setData(JsonNode data) {
         this.data = data;
     }
 
@@ -84,6 +78,7 @@ public class EventSchema {
         USER,
         USER_IDENTIFIER,
         IDENTIFIER;
-    }   
-    
+    }
+
 }
+
